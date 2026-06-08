@@ -4,7 +4,7 @@ from django.db import models
 
 #model for evaluation 
 class Evaluation(models.Model):
-    questionb = models.TextField()
+    question = models.TextField()
     answer = models.TextField()
 
     grammar_score = models.FloatField(default=0)  
