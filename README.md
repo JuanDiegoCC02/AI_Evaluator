@@ -78,6 +78,9 @@ evaluator/
 └── urls.py
 
 ---
+
 # Credits
 Juan Diego Corella Camacho
 Backend Developer | Full Stack | Telecommunications & Systems Engineering
+
+---
