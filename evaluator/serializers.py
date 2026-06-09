@@ -16,6 +16,7 @@ class EvaluationSerializer(serializers.ModelSerializer):
             'final_score',
             'grammar_feedback',
             'created_at',
+            'evaluation_label'
         )
 
     def create(self, validated_data):
@@ -39,10 +40,23 @@ class EvaluationSerializer(serializers.ModelSerializer):
         )
 
         # Final score
-        final_score = (
+        final_score = round(
         grammar_score * 0.3 +
-        relevance_score * 0.7
+        relevance_score * 0.7,
+        2
     )
+        
+        if final_score >= 90:
+            evaluation_label = "Excellent"
+
+        elif final_score >= 75:
+            evaluation_label = "Good"
+
+        elif final_score >= 60:
+            evaluation_label = "Average"
+
+        else:
+            evaluation_label = "Poor"
 
         evaluation = Evaluation.objects.create(
             question=question,
@@ -51,6 +65,7 @@ class EvaluationSerializer(serializers.ModelSerializer):
             relevance_score=relevance_score,
             final_score=final_score,
             grammar_feedback=grammar_feedback,
+            evaluation_label=evaluation_label
         )
 
         return evaluation
