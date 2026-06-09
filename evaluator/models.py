@@ -14,6 +14,8 @@ class Evaluation(models.Model):
     grammar_feedback = models.TextField(blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
+
+    evaluation_label = models.CharField(max_length=20, default="Unknown")
     
     def __str__(self):
         return f"Evaluation {self.id}"
