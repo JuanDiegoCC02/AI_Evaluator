@@ -72,15 +72,37 @@ Each evaluation is stored for historical tracking and analytics.
 ---
 
 # 🏗️ Project Structure
+
+```text
 evaluator/
-├── models/
-├── serializers/
-├── views/
-├── services/
-│   ├── grammar_service.py
-│   ├── similarity_service.py
-│   ├── scoring_service.py
-└── urls.py
+│
+├── evaluations/
+│   ├── services/
+│   │   ├── grammar_service.py
+│   │   ├── similarity_service.py
+│   │   └── scoring_service.py
+│   │
+│   ├── migrations/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── admin.py
+│
+├── evaluator/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+
 
 ---
 
