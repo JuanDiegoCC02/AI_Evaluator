@@ -102,6 +102,102 @@ evaluator/
 
 ---
 
+# 🔧 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/JuanDiegoCC02/AI-Evaluator.git
+cd AI-Evaluator
+```
+
+## Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+## Activate Virtual Environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configure PostgreSQL
+
+Create a PostgreSQL database and update your database configuration in:
+
+```python
+settings.py
+```
+
+Example:
+
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "ai_evaluator",
+        "USER": "postgres",
+        "PASSWORD": "your_password",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
+```
+
+## Apply Migrations
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Run Development Server
+
+```bash
+python manage.py runserver
+```
+
+Application available at:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## API Documentation
+
+Swagger UI
+
+```text
+http://127.0.0.1:8000/api/docs/
+```
+
+OpenAPI Schema
+
+```text
+http://127.0.0.1:8000/api/schema/
+```
+
+Redoc
+
+```text
+http://127.0.0.1:8000/api/redoc/
+```
 
 
 ---
