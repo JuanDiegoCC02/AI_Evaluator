@@ -125,12 +125,6 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux / macOS
-
-```bash
-source venv/bin/activate
-```
-
 ## Install Dependencies
 
 ```bash
@@ -178,27 +172,6 @@ Application available at:
 ```text
 http://127.0.0.1:8000/
 ```
-
-## API Documentation
-
-Swagger UI
-
-```text
-http://127.0.0.1:8000/api/docs/
-```
-
-OpenAPI Schema
-
-```text
-http://127.0.0.1:8000/api/schema/
-```
-
-Redoc
-
-```text
-http://127.0.0.1:8000/api/redoc/
-```
-
 
 ---
 
