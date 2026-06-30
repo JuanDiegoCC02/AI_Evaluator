@@ -1,4 +1,4 @@
-# 📘 AI Evaluator
+# 🔎​ AI Evaluator
 
 AI Evaluator is a backend system built with Django REST Framework that automatically evaluates text responses using Natural Language Processing (NLP). It combines grammatical analysis and semantic similarity to generate a final score and quality classification.
 
